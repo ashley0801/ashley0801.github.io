@@ -1,0 +1,351 @@
+
+body {
+    background-color: black;
+  }
+    
+  h4 {
+    font-weight: 200;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+  }
+  h2{
+    color: white;
+    font-size: xx-large;
+    text-align: center;
+    height: 30px ;
+    font-style: italic;
+  }
+
+
+
+:root{
+    --hauteur-menu: 60px;
+  }
+  * {
+    margin: 0px;
+    padding: 0px;
+    font-family: Montserrat, sans-serif;
+  }
+  nav {
+    width: 100%;
+    font-size: 18px;
+    top: 0;
+  }
+  
+  nav > ul {
+    display: flex;
+    text-align: center;
+    box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.3);
+    height: var(--hauteur-menu);
+  }
+   
+  nav ul {
+    list-style-type: none;
+  }
+  
+  nav > ul > li {
+    background-color: black;
+    position: relative;
+    height: 100%;
+    flex: 1;
+  }
+  
+  nav > ul > li > a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  li a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .menu-deroulant > a:after{
+    content: '❯';
+    font-size: 15px;
+    margin-left: 7px;
+    display: inline-block;
+  }
+  
+  .sous-menu {
+    margin-top: var(--hauteur-menu);
+    width: 100%;
+    text-align: left;
+    background-color: black;
+    border-radius: 2px;
+    overflow: hidden;
+    max-height: 0;
+  }
+  
+  .sous-menu > li > a {
+    height: 50px;
+    padding-left: 20px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+  }
+  
+  nav > ul > li:hover > a{
+    color: rgb(189, 107, 135);
+  }
+  
+  .sous-menu > li:hover {
+    background-color: #91688f;
+  }
+  
+  .sous-menu > li:hover > a {
+    color: white;
+  }
+  
+  @keyframes rotationFleche {
+    0% {
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(90deg);
+    }
+  }
+  
+  .menu-deroulant:hover > a:after{
+    animation: rotationFleche 0.2s linear forwards;
+  }
+  
+  @keyframes apparitionSousMenu {
+    0% {
+      box-shadow: 0px 3px 3px 1px rgba(0,0,0,0);
+    }
+    30% {
+      box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+    }
+    100% {
+      max-height: 50em;
+      box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+    }
+  }
+  
+  .menu-deroulant:hover > .sous-menu {
+    animation: apparitionSousMenu 1s forwards;
+  }
+
+  .c_slider{
+    position: relative;
+  }
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 0.3em;
+    font-weight: 400;
+    letter-spacing: .5px;
+  }
+
+
+
+
+
+  
+  .container {
+    position: relative;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  
+  .container .card {
+    position: relative;
+    width: 250px;
+    background: linear-gradient(0deg, rgb(91, 42, 85), rgb(45, 28, 46), rgb(12, 8, 12));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    border-radius: 8px;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  
+  .container .card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 15px 35px black;
+    cursor: pointer;
+  }
+  
+  .container .card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    
+    pointer-events: none;
+    z-index: 1;
+  }
+  .percent {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 50px #000;
+    background: #222;
+    
+  }
+  
+  .percent .number {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+   
+  }
+  
+  .percent .number h2 { 
+  color: white;
+    font-weight: 700;
+    font-size: 25px;
+    transition: 0.5s;
+  }
+  
+  .card:hover .percent .number h2 { 
+    color: #fff;
+    font-weight: 700;
+    font-size: 35px;
+  }
+  
+  .percent .number h2 span {
+    font-size: 20px;
+    color: white;
+    transition: 0.5s;
+  }
+  
+  .card:hover .percent .number h2 span {
+    font-size: 20px;
+    color: #fff;
+    
+  }
+  
+  .text {
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    color: white;
+    transition: 0.5s;
+  }
+  
+  .card:hover .text {
+    font-size: 20px;
+    color: rgb(205, 203, 203);
+  }
+  
+  svg {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    z-index: 50;
+  }
+  
+  svg circle {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #191919;
+    stroke-width: 10;
+    stroke-linecap: round;
+    transform: translate(5px, 5px)
+  }
+  
+  svg circle:nth-child(2) {
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+  }
+  
+  .card:nth-child(1) svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 90) / 100);
+    stroke:#a65aa3;
+  }
+  .card:nth-child(2) svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 75) / 100);
+    stroke:#a65aa3;
+  }
+  .card:nth-child(3) svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 70) / 100);
+    stroke: #a65aa3;
+  }
+  .card:nth-child(4) svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 80) / 100);
+    stroke: #a65aa3;
+  }
+  .card:nth-child(5) svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 70) / 100);
+    stroke:  #a65aa3;
+  }
+  .card:nth-child(6) svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 50) / 100);
+    stroke:#a65aa3;
+  }
+ 
+
+
+
+
+  
+
+  .container3 {
+    text-align: center;
+    width: 100%;
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    word-spacing: normal;
+  }
+  
+  .Soft {
+    display: flex;                /* Transformation en flexbox */
+    padding: O;                    /* Suppression des marges internes */
+  }
+  
+  .Soft h2 {
+    list-style-type: none ;       /* Suppression des puces */
+    margin: 1.6rem;               /* Marges externes */
+    padding: 45px;           /* Marges internes */
+    border: 2px solid rgba(180, 59, 142, 0.993); 
+    border-width: 3px; 
+    color: white;                  /* Couleur du texte */            
+    font-size: 20px;
+    background-color:black;
+  }
+
+h2 {
+  font-weight: 100;
+  color: rgb(204, 61, 109);
+  font-size: large;
+  display: fixed;
+  padding: 20px 20px 20px 20px;
+  font-size: 30px;
+  font-style: italic;
+}
+h2{
+    color: white;
+    font-size: xx-large;
+    text-align: center;
+    height: 30px ;
+    font-style: italic;
+  }
