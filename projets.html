@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="projets.css">
+</head>
+
+<body>
+    <h4>Portfolio</h4>
+    <br>
+    <nav>
+      <ul>
+        <li class="menu-deroulant">
+          <a href="index.html">About</a>
+          <ul class="sous-menu">
+          <li><a href="index.html#Formations">Formations</a></li>
+          <li><a href="index.html#Expériences">Expériences professionnelles</a></li>
+        </ul>
+      </li>
+      <li class="menu-deroulant">
+        <a href="#">Projets</a>
+        <ul class="sous-menu">
+          <li><a href="#farm">Farm Heroes Saga</a></li>
+          <li><a href="#illusion">Musée de l'illusion</a></li>
+        </ul>
+      </li>
+      <li class="menu-deroulant">
+        <a href="competence.html">Compétences</a>
+        <ul class="sous-menu">
+          <li><a href="competence.html#competences">Compétences</a></li>
+          <li><a href="competence.html#softskills">Softskills</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="nan.html">Hobbies</a>
+      </li>
+    </ul>
+  </nav>
+
+  
+    <br><br><br><br><br>
+  <h2>Projets</h2>
+  <br><br><br>
+  <h3>N'hésitez pas à cliquer sur un des projets pour en savoir plus !</h3>
+  <br>
+  <br><br>
+  
+
+  <span class="opacity1 ">
+    <div class="con"><a href="#farm" class="fa" ><img src="top.png" class="image2" alt="image2"/><div class="text">Farm Heroes Saga</div></a></div>
+   <div class="con2"><a href="#illusion" class="f"><img src="accueil.jpg" class="image2" alt="image2"/><div class="text2">Musée de l'illusion</div></a></div>
+  </span>
+ 
+
+
+<br><br><br><br>
+
+     
+    <h2 id="farm">Farm heroes saga</h2>
+    <br><br>
+     <h3>Jeu inspiré de "Farm Heroes Saga", réalisé en langage C.</h3>
+     <br><br>
+     
+
+
+ 
+    <br>
+    <h5>Description des fonctionnalitées</h5>
+    <br>
+    <ul class="slides">
+      <input type="radio" name="radio-btn" id="img-1" checked />
+      <li class="slide-container">
+          <div class="slide">
+              <p><img src="Menu.png" /><strong>Menu</strong><br>Le joueur commence par inscrire son prénom. Il peut soit commencer une nouvelle partie sois charger une partie. Cela dépend de son
+                  enregistrement dans le fichier de sauvegarde. Les nouvelles parties ne concernent pas que les nouveaux joueurs. En effet elles permettent au joueur déja sauvegarder de recommencer le jeu sans que cela affecte sa dernière partie sauvegarder à moins qu'il en décide autrement.</p>
+          </div>
+          <div class="nav">
+              <label for="img-2" class="next">&#x203a;</label>
+          </div>
+      </li>
+  
+      <input type="radio" name="radio-btn" id="img-2" />
+      <li class="slide-container">
+          <div class="slide">
+            <p><img src="nv.png" /><strong>Nouvelle partie</strong><br>Le plateau de jeu se présente comme une matrice de caractères 10 lignes x 15 colonnes contenant aléatoirement les lettres "S" pour soleil, "F" pour fraise, "P" pour pomme, "O" pour oignon, et "M" pour mandarine.
+              Le joueur a pour objectif de remplir un contrat qui lui est annoncé au début du tableau. Il correspond à un nombre préfixé d'items à "manger" en un nombre préfixé de coups. Le contrat est différent sur chaque tableau et la difficulté est croissante.
+              Pour accumuler des points le joueur doit sois former un groupe de 3, de 4, de 5 ou sinon en L en Croix ou en T. </p>
+          </div>
+          <div class="nav">
+              <label for="img-1" class="prev">&#x2039;</label>
+              <label for="img-3" class="next">&#x203a;</label>
+          </div>
+      </li>
+  
+      <input type="radio" name="radio-btn" id="img-3" />
+      <li class="slide-container">
+          <div class="slide">
+            <p><img src="gagner.png" /><strong>Partie gagnée</strong><br>Si le joueur rempli son contrat dans le nombre de coups préfixé, le jeu lui propose de passer au tableau suivant ou de sauvegarder sa partie en cours. Le fait d'accomplir un tableau, le jeu remet à cinq le compteur de vie si il en avait perdu auparavant.</p>
+          </div>
+          <div class="nav">
+              <label for="img-2" class="prev">&#x2039;</label>
+              <label for="img-4" class="next">&#x203a;</label>
+          </div>
+      </li>
+  
+      <input type="radio" name="radio-btn" id="img-4" />
+      <li class="slide-container">
+          <div class="slide">
+            <p><img src="chargement.png" /><strong>Chargement partie</strong><br>Ici, le joueur décide de charger une partie. C'est à dire qu'il va attérir sur sa dernière partie sauvegarder.</p>
+          </div>
+          <div class="nav">
+              <label for="img-3" class="prev">&#x2039;</label>
+              <label for="img-5" class="next">&#x203a;</label>
+          </div>
+      </li>
+  
+      <input type="radio" name="radio-btn" id="img-5" />
+      <li class="slide-container">
+          <div class="slide">
+            <p><img src="bonus.png" /><strong>Partie chargée</strong><br>J'ai décidée de vous présenter le dernier niveau. Celui-ci est un peu différent des autres. En effet, on peut voir afficher dans la première ligne, les lettres B qui signifient "bonus". Le but de ce niveau est que toutes les lettres B descendent au fur et à mesure de la partie jusqu'à atteindre la dernière ligne. Lorsque elle aura atteint celle-ci, toute la ligne se supprimera. Cela permettra au joueur de remporter un point bonus en plus d'un point pour chaque items supprimés.</p>
+          </div>
+          <div class="nav">
+              <label for="img-4" class="prev">&#x2039;</label>
+              <label for="img-6" class="next">&#x203a;</label>
+          </div>
+      </li>
+  
+      <input type="radio" name="radio-btn" id="img-6" />
+      <li class="slide-container">
+          <div class="slide">
+            <p><img src="Perdre.png" /><strong>Partie perdue</strong><br>En cas d'échec, le joueur consomme une vie et le jeu lui propose de recommencer le même niveau ou sauvegarder la partie en cours. Au bout de 5 vies, le joueur a perdu et le jeu s'arrête. Le fait de quitter le jeu remet à cinq le compteur de vie.</p>
+          </div>
+          <div class="nav">
+              <label for="img-5" class="prev">&#x2039;</label>
+              <label for="img-7" class="next">&#x203a;</label>
+          </div>
+      </li>
+
+      <input type="radio" name="radio-btn" id="img-7" />
+      <li class="slide-container">
+          <div class="slide">
+            <p><img src="sauvegarde.png" /><strong>Fichier sauvegarde</strong><br>Le programme enregistre dans un fichier le nom du joueur et les niveaux accomplis pour que la prochaine partie
+              commence sur le prochain tableau à accomplir.</p>
+          </div>
+          <div class="nav">
+              <label for="img-6" class="prev">&#x2039;</label>
+          </div>
+      </li>
+  </ul>
+
+<br><br><br><br><br><br><br><br>
+<br><br>
+    <h2 id="illusion">Musée de l'illusion</h2>
+        <br><br>
+     <h3>Projet réalisé en HTML CSS PHP PDO et SQL. <br>
+     </h3>
+     <br>
+
+    <br><br>
+    <h5>Description des fonctionnalitées</h5>
+    <br>
+      <ul class="slides"> 
+          <input type="radio" name="radio-btn2" id="img-8"  checked />
+          <li class="slide-container">
+              <div class="slide">
+                  <p><img src="accueil.jpg" /><br><strong>Page d'accueil</strong><br>
+                    Le musée de l’illusion est un site web fictif créer pour la promotion d’un musée.
+                    Dans cette application, il y a une partie front-end (écrans) et une partie back-end (gestion des données de connexion dans une base de données SQL).</p>
+              </div>
+              <div class="nav">
+                  <label for="img-9" class="next">&#x203a;</label>
+              </div>
+          </li>
+      
+          <input type="radio" name="radio-btn2" id="img-9" />
+          <li class="slide-container">
+              <div class="slide">
+                <p><img src="visite.jpg" /><strong>Page de visite</strong><br>Sur cet écran, les différents catégories d’œuvres seront présentées. C’est la porte d’entrée pour la visite. Il faut cliquer sur une catégorie pour en visionner le détail. A la fin, l’utilisateur sera redirigé vers cet écran pour le visionnage des autres catégories ou le retour à l’écran d’accueil.</p>
+              </div>
+              <div class="nav">
+                  <label for="img-8" class="prev">&#x2039;</label>
+                  <label for="img-10" class="next">&#x203a;</label>
+              </div>
+          </li>
+      
+          <input type="radio" name="radio-btn2" id="img-10" />
+          <li class="slide-container">
+              <div class="slide">
+                <p><img src="contact.jpg" /><strong>Page contact</strong><br>Cette fonctionnalité permet à un utilisateur d’envoyer un mail au responsable de l’entreprise.</p>
+              </div>
+              <div class="nav">
+                  <label for="img-9" class="prev">&#x2039;</label>
+                  <label for="img-11" class="next">&#x203a;</label>
+              </div>
+          </li>
+      
+          <input type="radio" name="radio-btn2" id="img-11"  />
+          <li class="slide-container">
+              <div class="slide">
+                <p><img src="panier.jpg" /><strong>Panier</strong><br>Chaque utilisateur peut, s'il le souhaite, sélectionner une oeuvre et la rajouter dans son panier pour ensuite l'acheter.</p>
+              </div>
+              <div class="nav">
+                  <label for="img-10" class="prev">&#x2039;</label>
+                  <label for="img-12" class="next">&#x203a;</label>
+              </div>
+          </li>
+      
+          <input type="radio" name="radio-btn2" id="img-12"  />
+          <li class="slide-container">
+              <div class="slide">
+                <p><img src="Client.jpg" /><strong>Création d'un compte client</strong><br>Tout utilisateur doit créer son compte avant d’arriver sur le site du musée. Ce compte n’est actif que si l’administrateur le valide. A tout moment, un compte peut être radié par l’administrateur.
+                  Le login de chaque utilisateur est son adresse mail.
+                  Un mot de passe est choisi par l’utilisateur.
+                  Seul l’administrateur existe par défaut.</p>
+              </div>
+              <div class="nav">
+                  <label for="img-11" class="prev">&#x2039;</label>
+                  <label for="img-13" class="next">&#x203a;</label>
+              </div>
+          </li>
+      
+          <input type="radio" name="radio-btn2" id="img-13" />
+          <li class="slide-container">
+              <div class="slide">
+                <p><img src="admin.jpg" /><strong>Gestion administrateur</strong><br>L’administrateur peut modifier les produits de la base de données :
+                  o	Proposer un nouveau produit
+                  o	Supprimer un produit obsolète (le stock devra être égal à 0)
+                  o	Modifier le prix d’un produit existant
+                  o	Augmenter le stock d’un produit en cas de livraison d’un arrivage d’une commande
+                  </p>
+              </div>
+              <div class="nav">
+                  <label for="img-12" class="prev">&#x2039;</label>
+              </div>
+          </li>
+      </ul>
+      
+      <br><br><br><br>
+
+
+</body>
+</html>
+
+
+
+                    
